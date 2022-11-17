@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ulr4xmq.css">
+</head>
+<body>
+<div class="generator">
+    <div class="control">
+        <div class="top-overlay"></div>
+        <div class="screen">
+            <form>
+                <label><input type="number" id="char-qty" min="8" max="30" value="8" disabled>characters</label>
+            </form>
+            <p>Your new password is:</p>
+            <textarea class="generated-password" readonly disabled></textarea>
+        </div>
+        <div class="buttons">
+            <button type="submit" class="generate-btn"></button>
+            <div class="char-change-btns">
+                <button type="button" onclick="changeValue(1)"></button>
+                <button type="button" onclick="changeValue(-1)"></button>
+            </div>
+        </div>
+        <div class="bott-overlay">
+            <button type="button" onclick="copyToClipboard(generatedPassword.value)" class="copy">
+                <span class="copy-alert">Copied!</span>Copy</button>
+        </div>
+    </div>
+    <img src="img/arcade.png" alt="generator machine" class="arcade">
+
+</div>
+
+
+
+    <script src="src/ui.js"></script>
+    <script src="src/passwordGenerator.js"></script>
+</body>
+</html>
